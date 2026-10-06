@@ -4,51 +4,53 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Embers from "./Embers";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
     <section
       ref={ref}
-      className="relative flex h-[100svh] min-h-[700px] w-full items-end overflow-hidden bg-ink"
+      className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-ink px-6 pb-16 pt-28"
     >
-      <motion.div style={{ scale }} className="absolute inset-0">
-        <Image
-          src="/images/wildcats-bleachers.jpg"
-          alt="Empty football bleachers overlook a fog-covered Rust Belt steel town at dusk, a still from the Catalystory film Dallas & Allegra."
-          fill
-          priority
-          className="object-cover object-[35%_center] grayscale-[25%] brightness-110 contrast-110"
-          sizes="100vw"
-        />
-      </motion.div>
-      <div className="absolute inset-0 bg-ink/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 via-45% to-transparent" />
+      <Embers />
 
-      <motion.div style={{ opacity, y }} className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 md:px-10 md:pb-28">
-        <p className="eyebrow animate-fade-up text-red-bright">Production company · Story consultancy</p>
-        <h1 className="font-display animate-fade-up mt-6 max-w-5xl text-[3.6rem] leading-[0.9] text-white [animation-delay:80ms] sm:text-7xl md:text-[8rem]">
+      <motion.div style={{ opacity, y }} className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-[18%] -z-10 h-[60vmin] w-[110vmin] max-w-[140%] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(232,116,26,0.28),transparent_65%)]"
+        />
+        <Image
+          src="/logo.webp"
+          alt="Catalystory"
+          width={1880}
+          height={580}
+          priority
+          sizes="(min-width: 1024px) 960px, 92vw"
+          className="animate-fade-up w-full max-w-[960px] mix-blend-screen"
+        />
+
+        <h1 className="font-display animate-fade-up mt-4 text-4xl leading-[0.95] tracking-wide text-white [animation-delay:120ms] sm:text-5xl md:text-7xl">
           Stories worth the cost of making them.
         </h1>
-        <p className="font-serif animate-fade-up mt-8 max-w-2xl text-lg leading-relaxed text-white/80 [animation-delay:140ms] md:text-2xl">
-          Catalystory is a Pittsburgh and Los Angeles production company and story consultancy. We make films
-          about people finding their way to each other, and we help writers finish the ones they&apos;ve started.
+        <p className="font-serif animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-white-dim [animation-delay:200ms] md:text-xl">
+          A Pittsburgh and Los Angeles production company and story consultancy. We make films about people finding
+          their way to each other, and we help writers finish the ones they&apos;ve started.
         </p>
-        <div className="animate-fade-up mt-10 flex flex-wrap gap-4 [animation-delay:200ms]">
+        <div className="animate-fade-up mt-10 flex flex-wrap justify-center gap-4 [animation-delay:280ms]">
           <Link
             href="/productions"
-            className="rounded-full bg-red px-8 py-4 text-sm font-medium tracking-wide text-white transition-transform hover:scale-[1.03] hover:bg-red-bright"
+            className="rounded-full bg-ember px-8 py-4 text-sm font-semibold tracking-wide text-ink transition-transform hover:scale-[1.03] hover:bg-ember-bright"
           >
             Our productions
           </Link>
           <Link
             href="/story-consulting"
-            className="rounded-full border border-white/35 px-8 py-4 text-sm font-medium tracking-wide text-white transition-colors hover:border-white hover:bg-white/10"
+            className="rounded-full border border-white/35 px-8 py-4 text-sm font-medium tracking-wide text-white transition-colors hover:border-ember-bright hover:bg-white/5"
           >
             Story consulting
           </Link>

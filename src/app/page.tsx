@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Statement from "@/components/Statement";
 import Lanes from "@/components/Lanes";
-import FeaturedFilm from "@/components/FeaturedFilm";
 import ProofStrip from "@/components/ProofStrip";
 import Team from "@/components/Team";
 import CTA from "@/components/CTA";
@@ -12,7 +11,6 @@ export default function Home() {
       <Hero />
       <Statement />
       <Lanes />
-      <FeaturedFilm />
       <ProofStrip />
       <Team compact />
       <CTA

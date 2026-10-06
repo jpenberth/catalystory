@@ -15,7 +15,7 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
 
   return (
     <>
-      <PageHero eyebrow="Contact" title={<>Tell us what you&apos;re <span className="text-red-bright">working on.</span></>}>
+      <PageHero eyebrow="Contact" title={<>Tell us what you&apos;re <span className="text-ember-bright">working on.</span></>}>
         <p>
           Whether you want to make a film or make your script better, we&apos;ll reply within a few business days.
         </p>
@@ -26,7 +26,7 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
           <aside className="space-y-8 text-white-dim">
             <div>
               <p className="eyebrow text-steel">Email</p>
-              <a href={`mailto:${site.email}`} className="mt-2 block text-lg text-white hover:text-red-bright">{site.email}</a>
+              <a href={`mailto:${site.email}`} className="mt-2 block text-lg text-white hover:text-ember-bright">{site.email}</a>
             </div>
             <div>
               <p className="eyebrow text-steel">Based in</p>

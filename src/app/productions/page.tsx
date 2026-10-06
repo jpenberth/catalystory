@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import ServiceGrid from "@/components/ServiceGrid";
 import Reveal from "@/components/Reveal";
 import CTA from "@/components/CTA";
-import { principles, productionServices, stills } from "@/lib/content";
+import { links, principles, productionServices } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Film Production Company in Pittsburgh & Los Angeles",
@@ -17,7 +15,7 @@ export const metadata: Metadata = {
 export default function Productions() {
   return (
     <>
-      <PageHero eyebrow="Productions" title={<>Character-driven film, <span className="text-red-bright">made to be made.</span></>}>
+      <PageHero eyebrow="Productions" title={<>Character-driven film, <span className="text-ember-bright">made to be made.</span></>}>
         <p>
           Catalystory is a Pittsburgh and Los Angeles film production company. We write, direct and produce
           shorts, features and music videos, and take on commissioned work as your director and producers.
@@ -27,7 +25,7 @@ export default function Productions() {
       <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <p className="eyebrow text-red-bright">What we make</p>
+            <p className="eyebrow text-ember-bright">What we make</p>
             <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">Services</h2>
           </Reveal>
           <div className="mt-12">
@@ -39,7 +37,7 @@ export default function Productions() {
       <section className="bg-ink-soft px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <p className="eyebrow text-red-bright">How we work</p>
+            <p className="eyebrow text-ember-bright">How we work</p>
             <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">What we believe</h2>
           </Reveal>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
@@ -53,27 +51,17 @@ export default function Productions() {
         </div>
       </section>
 
-      <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <p className="eyebrow text-red-bright">Featured</p>
-            <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">Dallas &amp; Allegra</h2>
-            <p className="font-serif mt-4 max-w-xl text-xl text-white-dim">
-              A Rust Belt Romeo and Juliet, and the first film we&apos;re making by asking the people who believe in it
-              to help get it made.
-            </p>
-            <Link href="/work/dallas-and-allegra" className="eyebrow mt-6 inline-block text-white hover:text-red-bright">
-              See the film →
-            </Link>
-          </Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">
-            {stills.slice(0, 6).map((s) => (
-              <div key={s.src} className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image src={s.src} alt={s.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover grayscale-[30%]" />
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className="bg-ink px-6 py-20 md:px-10">
+        <Reveal className="mx-auto max-w-4xl border-y border-line py-10 text-center">
+          <p className="eyebrow text-ember-bright">Currently in production</p>
+          <p className="font-serif mt-4 text-2xl text-white md:text-3xl">
+            <em>Dallas &amp; Allegra</em>, a Rust Belt Romeo and Juliet, written and directed by J. Penberth Rabold and
+            produced by Shannon Geary.
+          </p>
+          <a href={links.filmSite} target="_blank" rel="noreferrer" className="eyebrow mt-6 inline-block text-white-dim hover:text-ember-bright">
+            Visit the film&apos;s site ↗
+          </a>
+        </Reveal>
       </section>
 
       <CTA heading="Have something to make?" body="Tell us about the project: the story, the format, the timeline." />

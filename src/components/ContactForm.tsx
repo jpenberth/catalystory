@@ -49,7 +49,7 @@ export default function ContactForm({ defaultInterest = "production" }: { defaul
   }
 
   const field =
-    "mt-2 w-full rounded-lg border border-line bg-ink px-4 py-3.5 text-white placeholder:text-steel focus:border-red-bright focus:outline-none";
+    "mt-2 w-full rounded-lg border border-line bg-ink px-4 py-3.5 text-white placeholder:text-steel focus:border-ember-bright focus:outline-none";
 
   return (
     <form onSubmit={onSubmit} className="space-y-6" noValidate={false}>
@@ -86,13 +86,13 @@ export default function ContactForm({ defaultInterest = "production" }: { defaul
       </label>
 
       {status === "error" && (
-        <p role="alert" className="text-sm text-red-bright">{error}</p>
+        <p role="alert" className="text-sm text-ember-bright">{error}</p>
       )}
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="rounded-full bg-red px-9 py-4 text-sm font-medium tracking-wide text-white transition-transform hover:scale-[1.03] hover:bg-red-bright disabled:opacity-60"
+        className="rounded-full bg-ember px-9 py-4 text-sm font-semibold tracking-wide text-ink transition-transform hover:scale-[1.03] hover:bg-ember-bright disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>

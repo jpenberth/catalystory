@@ -19,6 +19,4 @@ npm run dev
 in Resend. Spam protection: hidden honeypot field, minimum-time check and a per-IP rate limit.
 
 ## Placeholders to replace
-- Wordmark in `src/components/Logo.tsx` (swap for the final logo)
-- `public/og-image.jpg` and icons are currently Dallas & Allegra assets
-- Imagery is from the Dallas & Allegra film until Catalystory footage exists
+- Logo is `public/logo.webp` (rendered with screen blending on black); a transparent SVG/PNG version would be cleaner.

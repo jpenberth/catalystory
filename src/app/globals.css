@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #0a0a0b;
+  --color-ink: #000000;
   --color-ink-soft: #111113;
   --color-panel: #151517;
-  --color-red: #d12b1f;
-  --color-red-bright: #ec3a2c;
-  --color-white: #f6f4f0;
+  --color-ember: #e8741a;
+  --color-ember-bright: #ffa23a;
+  --color-white: #f4f2ee;
   --color-white-dim: #b9b6b0;
   --color-steel: #7d7b78;
   --color-line: rgba(246, 244, 240, 0.14);
@@ -19,8 +19,8 @@
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
   --color-panel: var(--color-panel);
-  --color-red: var(--color-red);
-  --color-red-bright: var(--color-red-bright);
+  --color-ember: var(--color-ember);
+  --color-ember-bright: var(--color-ember-bright);
   --color-white: var(--color-white);
   --color-white-dim: var(--color-white-dim);
   --color-steel: var(--color-steel);
@@ -41,7 +41,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-red);
+  background: var(--color-ember);
   color: var(--color-white);
 }
 

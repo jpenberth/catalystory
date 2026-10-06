@@ -19,15 +19,15 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        scrolled || open ? "bg-ink/90 backdrop-blur-md" : "bg-gradient-to-b from-black/60 to-transparent"
+        scrolled || open ? "bg-ink/90 backdrop-blur-md" : "bg-gradient-to-b from-black/80 to-transparent"
       }`}
     >
       <nav
         aria-label="Primary"
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10"
       >
-        <Link href="/" className="text-2xl" onClick={() => setOpen(false)}>
-          <Logo />
+        <Link href="/" aria-label="Catalystory home" onClick={() => setOpen(false)}>
+          <Logo priority className="h-9 md:h-11" />
         </Link>
 
         <div className="hidden items-center gap-9 md:flex">
@@ -38,7 +38,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact"
-            className="eyebrow rounded-full bg-red px-5 py-2.5 text-white transition-colors hover:bg-red-bright"
+            className="eyebrow rounded-full bg-ember px-5 py-2.5 font-semibold text-ink transition-colors hover:bg-ember-bright"
           >
             Get in touch
           </Link>

@@ -5,7 +5,6 @@ const pages: [string, number][] = [
   ["", 1],
   ["/productions", 0.9],
   ["/story-consulting", 0.9],
-  ["/work/dallas-and-allegra", 0.7],
   ["/about", 0.6],
   ["/contact", 0.6],
 ];

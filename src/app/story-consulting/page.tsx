@@ -28,7 +28,7 @@ export default function StoryConsulting() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd()]) }} />
-      <PageHero eyebrow="Story Consulting" title={<>Finish the story <span className="text-red-bright">you started.</span></>}>
+      <PageHero eyebrow="Story Consulting" title={<>Finish the story <span className="text-ember-bright">you started.</span></>}>
         <p>
           Script notes and story consulting from a writer-director who has been to the desks you&apos;re aiming for,
           and who knows exactly what &ldquo;almost&rdquo; feels like.
@@ -41,7 +41,7 @@ export default function StoryConsulting() {
             <p className="font-serif text-balance-pretty text-3xl leading-snug text-white md:text-4xl">
               Since 2015, J. Penberth Rabold&apos;s series bibles, pilots and features have landed on desks at Netflix, Apple,
               Starz and HBO. He&apos;s come close, a lot, and learned what separates a script that almost works from one that
-              does. <span className="text-red-bright">That&apos;s what he brings to your pages.</span>
+              does. <span className="text-ember-bright">That&apos;s what he brings to your pages.</span>
             </p>
           </Reveal>
         </div>
@@ -50,7 +50,7 @@ export default function StoryConsulting() {
       <section className="bg-ink-soft px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <p className="eyebrow text-red-bright">How we can help</p>
+            <p className="eyebrow text-ember-bright">How we can help</p>
             <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">Ways to work together</h2>
           </Reveal>
           <div className="mt-12">
@@ -62,14 +62,14 @@ export default function StoryConsulting() {
       <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <p className="eyebrow text-red-bright">The process</p>
+            <p className="eyebrow text-ember-bright">The process</p>
             <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">Simple to start</h2>
           </Reveal>
           <ol className="mt-12 grid gap-10 md:grid-cols-3">
             {consultingProcess.map((s, i) => (
               <Reveal key={s.step} delay={i * 0.08}>
                 <li className="list-none">
-                  <p className="font-display text-6xl text-red-bright">{s.step}</p>
+                  <p className="font-display text-6xl text-ember-bright">{s.step}</p>
                   <h3 className="font-display mt-2 text-3xl text-white">{s.title}</h3>
                   <p className="mt-3 leading-relaxed text-white-dim">{s.body}</p>
                 </li>

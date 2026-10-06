@@ -1,8 +1,16 @@
-export default function Logo({ className = "" }: { className?: string }) {
-  // Placeholder wordmark until the final logo arrives.
+import Image from "next/image";
+
+export default function Logo({ className = "h-7", priority = false }: { className?: string; priority?: boolean }) {
+  // The black background of the logo file fuses with the page via screen blending.
   return (
-    <span className={`font-display tracking-[0.12em] text-white ${className}`}>
-      CATALYSTORY<span className="text-red-bright">.</span>
-    </span>
+    <Image
+      src="/logo.webp"
+      alt="Catalystory"
+      width={1880}
+      height={580}
+      priority={priority}
+      sizes="(min-width: 768px) 220px, 160px"
+      className={`w-auto mix-blend-screen ${className}`}
+    />
   );
 }

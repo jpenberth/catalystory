@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <PageHero eyebrow="About" title={<>Write truth. <span className="text-red-bright">Inspire love.</span></>}>
+      <PageHero eyebrow="About" title={<>Write truth. <span className="text-ember-bright">Inspire love.</span></>}>
         <p>
           Catalystory exists because a good story changes the person who tells it and the person who finds it. We
           produce films and help writers finish them.

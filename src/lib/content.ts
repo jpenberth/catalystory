@@ -8,7 +8,6 @@ export const site = {
 };
 
 export const links = {
-  campaign: "https://seedandspark.com/fund/dallasallegra",
   filmSite: "https://dallasandallegra.com",
   director: "https://jpenberth.com",
   writersTable: "https://jpenberth.substack.com",
@@ -20,7 +19,6 @@ export const links = {
 export const nav = [
   { href: "/productions", label: "Productions" },
   { href: "/story-consulting", label: "Story Consulting" },
-  { href: "/work/dallas-and-allegra", label: "Work" },
   { href: "/about", label: "About" },
 ];
 
@@ -96,22 +94,6 @@ export const faqs = [
     q: "Do you take on work for hire?",
     a: "Yes. We direct and produce commissioned films, music videos and shorts. Tell us what you're making on the contact page.",
   },
-];
-
-export const film = {
-  title: "Dallas & Allegra",
-  tagline: "Love is destruction.",
-  logline:
-    "She's got a plane ticket to Oxford. He's got a safe full of cash and one last score. In a steel town built on dead dreams, they fall for each other anyway, and discover the fastest way out of hell is straight through it, together.",
-};
-
-export const stills = [
-  { src: "/images/wildcats-bleachers.jpg", alt: "Empty football bleachers marked 'Home of the Wildcats' overlook a fog-covered steel mill town at dusk." },
-  { src: "/images/dallas-mirror.jpg", alt: "Dallas washes his hands at a cracked bathroom mirror, the mill skyline out the window." },
-  { src: "/images/mill-handoff.jpg", alt: "Two silhouetted figures exchange a bag inside the ruins of the old steel mill at sunset." },
-  { src: "/images/lit-window.jpg", alt: "A single lit window glows in an otherwise dark row of brick houses at night." },
-  { src: "/images/still-here-street.jpg", alt: "A decayed Bellvue Falls street lined with burned-out buildings." },
-  { src: "/images/truck-warner-marquee.jpg", alt: "Dallas and Allegra sit in the bed of a truck overlooking Bellvue Falls, the Warner theater marquee glowing below." },
 ];
 
 export type TeamMember = {

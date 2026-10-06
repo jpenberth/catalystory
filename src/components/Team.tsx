@@ -6,7 +6,7 @@ export default function Team({ compact = false }: { compact?: boolean }) {
     <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <p className="eyebrow text-red-bright">The Team</p>
+          <p className="eyebrow text-ember-bright">The Team</p>
           <h2 className="font-display mt-4 text-5xl text-white md:text-7xl">The people behind it</h2>
         </Reveal>
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
@@ -23,7 +23,7 @@ export default function Team({ compact = false }: { compact?: boolean }) {
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                   {m.links.map((l) => (
                     <li key={l.href}>
-                      <a href={l.href} target="_blank" rel="noreferrer" className="text-red-bright hover:text-white">
+                      <a href={l.href} target="_blank" rel="noreferrer" className="text-ember-bright hover:text-white">
                         {l.label} ↗
                       </a>
                     </li>

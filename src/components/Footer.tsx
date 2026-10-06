@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-line bg-ink">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:px-10">
         <div>
-          <Logo className="text-3xl" />
+          <Logo className="h-12" />
           <p className="font-serif mt-5 max-w-sm text-lg italic text-white-dim">{site.tagline}</p>
           <p className="mt-5 text-sm text-steel">Pittsburgh, Pennsylvania · Los Angeles, California</p>
         </div>
@@ -29,8 +29,7 @@ export default function Footer() {
             <li><a href={links.writersTable} target="_blank" rel="noreferrer" className="hover:text-white">The Writer&apos;s Table</a></li>
             <li><a href={links.instagram} target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a></li>
             <li><a href={links.youtube} target="_blank" rel="noreferrer" className="hover:text-white">YouTube</a></li>
-            <li><a href={links.filmSite} target="_blank" rel="noreferrer" className="hover:text-white">Dallas &amp; Allegra</a></li>
-          </ul>
+                      </ul>
         </div>
       </div>
       <div className="border-t border-line px-6 py-6 text-center text-xs text-steel md:px-10">

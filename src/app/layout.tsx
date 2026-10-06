@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Catalystory",
     title,
     description: site.description,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Catalystory, a film production company and story consultancy." }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Catalystory logo: silver lettering with a flame forming the S." }],
   },
   twitter: { card: "summary_large_image", title, description: site.description, images: ["/og-image.jpg"] },
   icons: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: "#0a0a0b" };
+export const viewport: Viewport = { themeColor: "#000000" };
 
 const jsonLd = {
   "@context": "https://schema.org",
