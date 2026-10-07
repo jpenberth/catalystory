@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+
+const FORMSPREE_URL = "https://formspree.io/f/mbgddqrq";
 
 const interests = [
   { value: "production", label: "A production / work for hire" },
@@ -11,28 +13,28 @@ const interests = [
 export default function ContactForm({ defaultInterest = "production" }: { defaultInterest?: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [error, setError] = useState("");
-  const loadedAt = useRef(0);
-
-  useEffect(() => {
-    loadedAt.current = Date.now();
-  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
     setError("");
     const form = new FormData(e.currentTarget);
+    const interest = interests.find((i) => i.value === form.get("interest"))?.label ?? "Something else";
+    form.set("_subject", `[Catalystory] ${interest}: ${form.get("name")}`);
+    form.set("interest", interest);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...Object.fromEntries(form), elapsed: Date.now() - loadedAt.current }),
+        headers: { Accept: "application/json" },
+        body: form,
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error ?? "Something went wrong.");
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.errors?.[0]?.message ?? "Something went wrong. Please email info@catalystory.com.");
+      }
       setStatus("done");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong.");
+      setError(err instanceof Error ? err.message : "Something went wrong. Please email info@catalystory.com.");
       setStatus("error");
     }
   }
@@ -42,7 +44,7 @@ export default function ContactForm({ defaultInterest = "production" }: { defaul
       <div role="status" className="rounded-2xl border border-line bg-panel p-10 text-center">
         <h3 className="font-display text-4xl text-white">Message received</h3>
         <p className="font-serif mt-4 text-lg text-white-dim">
-          Thank you. We&apos;ve sent a confirmation to your inbox and will be in touch within a few business days.
+          Thank you. We&apos;ll be in touch within a few business days.
         </p>
       </div>
     );
@@ -56,7 +58,7 @@ export default function ContactForm({ defaultInterest = "production" }: { defaul
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <label>
           Website
-          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 

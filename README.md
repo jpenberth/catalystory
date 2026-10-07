@@ -14,9 +14,9 @@ npm run dev
 ```
 
 ## Contact form
-`POST /api/contact` emails inquiries to info@catalystory.com and sends the sender a confirmation via
-[Resend](https://resend.com). Set `RESEND_API_KEY` (see `.env.example`) and verify the catalystory.com domain
-in Resend. Spam protection: hidden honeypot field, minimum-time check and a per-IP rate limit.
+The form on `/contact` posts to [Formspree](https://formspree.io), which emails inquiries to info@catalystory.com.
+The endpoint is set in `src/components/ContactForm.tsx`. Spam protection: a hidden honeypot field (`_gotcha`) plus
+Formspree's own filtering.
 
 ## Placeholders to replace
 - Logo is `public/logo.webp` (rendered with screen blending on black); a transparent SVG/PNG version would be cleaner.
