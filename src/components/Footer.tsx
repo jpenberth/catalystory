@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { links, nav, site } from "@/lib/content";
+import { services } from "@/lib/services";
 import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-ink">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:px-10">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_1fr_1fr_1fr] md:px-10">
         <div>
           <Logo className="h-12" />
           <p className="font-serif mt-5 max-w-sm text-lg italic text-white-dim">{site.tagline}</p>
@@ -20,6 +21,16 @@ export default function Footer() {
               </li>
             ))}
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="eyebrow text-steel">Services</p>
+          <ul className="mt-5 space-y-3 text-sm text-white-dim">
+            {services.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/${s.group}/${s.slug}`} className="hover:text-white">{s.navLabel}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

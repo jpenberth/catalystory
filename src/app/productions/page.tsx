@@ -6,16 +6,17 @@ import CTA from "@/components/CTA";
 import { links, principles, productionServices } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Film Production Company in Pittsburgh & Los Angeles",
+  title: "Film Production Company, Pittsburgh & LA",
   description:
     "Catalystory produces and directs character-driven films, shorts and music videos, and takes on commissioned work for hire from Pittsburgh and Los Angeles.",
   alternates: { canonical: "/productions" },
+  openGraph: { title: "Film Production Company, Pittsburgh & LA | Catalystory", url: "/productions", type: "website" },
 };
 
 export default function Productions() {
   return (
     <>
-      <PageHero eyebrow="Productions" title={<>Films about <span className="text-ember-bright">the human experience.</span></>}>
+      <PageHero eyebrow="Productions" crumbs={[{ name: "Productions", href: "/productions" }]} title={<>Films about <span className="text-ember-bright">the human experience.</span></>}>
         <p>
           Catalystory produces and directs shorts, features and music videos from Pittsburgh and Los Angeles, and takes
           on commissioned work as your director and producers.

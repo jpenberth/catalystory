@@ -24,19 +24,22 @@ export default function Hero() {
           aria-hidden="true"
           className="absolute left-1/2 top-[18%] -z-10 h-[60vmin] w-[110vmin] max-w-[140%] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(232,116,26,0.28),transparent_65%)]"
         />
-        <Image
-          src="/logo.webp"
-          alt="Catalystory"
-          width={1880}
-          height={580}
-          priority
-          sizes="(min-width: 1024px) 960px, 92vw"
-          className="animate-fade-up w-full max-w-[960px] mix-blend-screen"
-        />
-
-        <h1 className="font-display animate-fade-up mt-4 text-4xl leading-[0.95] tracking-wide text-white [animation-delay:120ms] sm:text-5xl md:text-7xl">
-          Every great story needs a spark.
+        <h1 className="w-full">
+          <Image
+            src="/logo.webp"
+            alt="Catalystory"
+            width={1880}
+            height={580}
+            priority
+            sizes="(min-width: 1024px) 960px, 92vw"
+            className="animate-fade-up mx-auto w-full max-w-[960px] mix-blend-screen"
+          />
+          <span className="sr-only">: film production company and story consultancy in Pittsburgh and Los Angeles</span>
         </h1>
+
+        <h2 className="font-display animate-fade-up mt-4 text-4xl leading-[0.95] tracking-wide text-white [animation-delay:120ms] sm:text-5xl md:text-7xl">
+          Every great story needs a spark.
+        </h2>
         <p className="font-serif animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-white-dim [animation-delay:200ms] md:text-xl">
           A Pittsburgh and Los Angeles production company and story consultancy. We make films about what breaks us
           and what remakes us, and help writers find the stories only they can tell.

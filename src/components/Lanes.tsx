@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "./Reveal";
+import { services } from "@/lib/services";
 
 const lanes = [
   {
@@ -52,6 +53,13 @@ export default function Lanes() {
             </Reveal>
           ))}
         </div>
+        <Reveal className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-line pt-8">
+          {services.map((s) => (
+            <Link key={s.slug} href={`/${s.group}/${s.slug}`} className="eyebrow text-white-dim hover:text-ember-bright">
+              {s.navLabel}
+            </Link>
+          ))}
+        </Reveal>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ const newsreader = Newsreader({
 });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], weight: ["300", "400", "500", "600"] });
 
-const title = "Catalystory | Film Production Company & Story Consulting";
+const title = "Catalystory: Pittsburgh Film Production & Story Consulting";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "J. Penberth Rabold" }],
   alternates: { canonical: "/" },
+  category: "film",
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   openGraph: {
     type: "website",
@@ -65,15 +67,29 @@ const jsonLd = {
       name: "Catalystory",
       url: site.url,
       email: site.email,
+      contactPoint: { "@type": "ContactPoint", contactType: "customer service", email: site.email, availableLanguage: "English" },
       description: site.description,
       slogan: site.tagline,
       logo: `${site.url}/icon-512.png`,
       image: `${site.url}/og-image.jpg`,
-      areaServed: ["Pittsburgh", "Los Angeles", "United States"],
+      areaServed: [
+        { "@type": "City", name: "Pittsburgh" },
+        { "@type": "City", name: "Los Angeles" },
+        { "@type": "Country", name: "United States" },
+      ],
       address: { "@type": "PostalAddress", addressLocality: "Pittsburgh", addressRegion: "PA", addressCountry: "US" },
       founder: { "@id": `${site.url}/#founder` },
       sameAs: [links.instagram, links.youtube, links.imdb, links.writersTable, links.director],
       knowsAbout: ["Film production", "Music videos", "Screenwriting", "Story consulting", "Script notes"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: "Catalystory",
+      description: site.description,
+      inLanguage: "en-US",
+      publisher: { "@id": `${site.url}/#organization` },
     },
     {
       "@type": "Person",
@@ -86,6 +102,7 @@ const jsonLd = {
     },
     {
       "@type": "Person",
+      "@id": `${site.url}/#producer`,
       name: "Shannon Geary",
       jobTitle: "Producer",
       worksFor: { "@id": `${site.url}/#organization` },

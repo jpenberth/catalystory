@@ -7,10 +7,11 @@ import CTA from "@/components/CTA";
 import { consultingProcess, consultingServices } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Story Consulting & Script Notes for Screenwriters",
+  title: "Story Consulting & Script Notes",
   description:
-    "Script notes, story and outline sessions, series bible review and Zoom coaching from a working writer-director whose scripts have reached Netflix, Apple, Starz and HBO.",
+    "Script notes, outline sessions, series bible review and Zoom story coaching from a working writer-director whose scripts reached Netflix, Apple, Starz and HBO.",
   alternates: { canonical: "/story-consulting" },
+  openGraph: { title: "Story Consulting & Script Notes | Catalystory", url: "/story-consulting", type: "website" },
 };
 
 const serviceJsonLd = {
@@ -28,7 +29,7 @@ export default function StoryConsulting() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd()]) }} />
-      <PageHero eyebrow="Story Consulting" title={<>Find the story <span className="text-ember-bright">only you can tell.</span></>}>
+      <PageHero eyebrow="Story Consulting" crumbs={[{ name: "Story Consulting", href: "/story-consulting" }]} title={<>Find the story <span className="text-ember-bright">only you can tell.</span></>}>
         <p>
           Honest script notes and story coaching from a working writer who knows what &ldquo;almost&rdquo; feels like.
         </p>

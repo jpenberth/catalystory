@@ -4,7 +4,7 @@ export const site = {
   email: "info@catalystory.com",
   tagline: "Write truth. Inspire love.",
   description:
-    "Catalystory is a Pittsburgh and Los Angeles film production company and story consultancy. We produce and direct character-driven films, shorts and music videos, and offer script and story consulting for writers.",
+    "Pittsburgh and Los Angeles film production company and story consultancy. Films, shorts and music videos, plus script notes and story coaching for writers.",
 };
 
 export const links = {
@@ -32,14 +32,17 @@ export const proof = [
 export const productionServices = [
   {
     title: "Original Films",
+    href: "/productions/short-film-production",
     body: "Shorts and features built around character, with a point of view and a plan for how they'll actually get made.",
   },
   {
     title: "Directing & Producing for Hire",
+    href: "/productions/directing-and-producing-for-hire",
     body: "Commissioned work with a director and a producer on your side of the table: brand films, narrative spots, short-form and series pilots.",
   },
   {
     title: "Music Videos",
+    href: "/productions/music-video-director",
     body: "Videos that give a song a story, built with artists we've worked with before, like Jacob Luttrell's “Way Too Soon” and “Familiar Faces.”",
   },
   {
@@ -51,18 +54,22 @@ export const productionServices = [
 export const consultingServices = [
   {
     title: "Script Notes",
+    href: "/story-consulting/script-notes",
     body: "Deep, honest notes on plot, structure, character and theme for features, pilots and shorts. Not coverage, a conversation about what your story is trying to be.",
   },
   {
     title: "Story & Outline Sessions",
+    href: "/story-consulting/story-coaching",
     body: "Stuck at the idea stage or the outline? We work out the engine of the story together: the want, the obstacle, the turns and the ending that earns itself.",
   },
   {
     title: "Series Bible Review",
+    href: "/story-consulting/series-bible-review",
     body: "Notes on your world, characters, season arc and pitch.",
   },
   {
     title: "Ongoing Coaching",
+    href: "/story-consulting/story-coaching",
     body: "Regular Zoom sessions that keep you writing and moving, with accountability, craft and a collaborator who wants you to finish.",
   },
 ];
@@ -73,7 +80,9 @@ export const consultingProcess = [
   { step: "03", title: "Work on the story", body: "Notes, sessions or coaching over Zoom, shaped around where you are in the process." },
 ];
 
-export const faqs = [
+export type Faq = { q: string; a: string };
+
+export const faqs: Faq[] = [
   {
     q: "Do you offer script coverage?",
     a: "No. Coverage rates a script for a studio's pass or consider. Notes are different. They're a developmental conversation about plot, character, structure and theme, meant to help you make the script better.",

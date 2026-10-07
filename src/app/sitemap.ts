@@ -1,18 +1,22 @@
 import type { MetadataRoute } from "next";
+import { services } from "@/lib/services";
 
 const base = "https://catalystory.com";
-const pages: [string, number][] = [
-  ["", 1],
-  ["/productions", 0.9],
-  ["/story-consulting", 0.9],
-  ["/about", 0.6],
-  ["/contact", 0.6],
+const updated = new Date("2026-10-07");
+
+const pages: { path: string; priority: number }[] = [
+  { path: "", priority: 1 },
+  { path: "/story-consulting", priority: 0.9 },
+  { path: "/productions", priority: 0.9 },
+  ...services.map((s) => ({ path: `/${s.group}/${s.slug}`, priority: 0.8 })),
+  { path: "/about", priority: 0.6 },
+  { path: "/contact", priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map(([path, priority]) => ({
+  return pages.map(({ path, priority }) => ({
     url: `${base}${path}`,
-    lastModified: new Date(),
+    lastModified: updated,
     changeFrequency: "monthly",
     priority,
   }));

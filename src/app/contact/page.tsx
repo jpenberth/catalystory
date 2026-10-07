@@ -5,8 +5,9 @@ import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a production, request script notes or ask about story consulting. Contact Catalystory.",
+  description: "Contact Catalystory in Pittsburgh and Los Angeles to start a production, request script notes or ask about story consulting.",
   alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact Catalystory", url: "/contact", type: "website" },
 };
 
 export default async function Contact({ searchParams }: { searchParams: Promise<{ interest?: string }> }) {
@@ -15,7 +16,7 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
 
   return (
     <>
-      <PageHero eyebrow="Contact" title={<>Tell us what you&apos;re <span className="text-ember-bright">working on.</span></>}>
+      <PageHero eyebrow="Contact" crumbs={[{ name: "Contact", href: "/contact" }]} title={<>Tell us what you&apos;re <span className="text-ember-bright">working on.</span></>}>
         <p>
           Whether you want to make a film or make your script better, we&apos;ll reply within a few business days.
         </p>

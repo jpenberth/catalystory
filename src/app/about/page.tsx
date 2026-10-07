@@ -7,16 +7,17 @@ import CTA from "@/components/CTA";
 import { principles } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Catalystory",
+  title: "About J. Penberth Rabold & Shannon Geary",
   description:
     "Catalystory is led by writer-director J. Penberth Rabold and producer Shannon Geary, a Pittsburgh and Los Angeles production company and story consultancy.",
   alternates: { canonical: "/about" },
+  openGraph: { title: "About J. Penberth Rabold & Shannon Geary | Catalystory", url: "/about", type: "website" },
 };
 
 export default function About() {
   return (
     <>
-      <PageHero eyebrow="About" title={<>Write truth. <span className="text-ember-bright">Inspire love.</span></>}>
+      <PageHero eyebrow="About" crumbs={[{ name: "About", href: "/about" }]} title={<>Write truth. <span className="text-ember-bright">Inspire love.</span></>}>
         <p>
           A story can change the person who tells it and the person who finds it. Catalystory exists to make films
           that do that, and to help writers tell theirs.
