@@ -123,7 +123,8 @@ export const team: TeamMember[] = [
     role: "Producer",
     bio: [
       "Shannon Geary spent 21 years as a music educator and theater director, teaching young artists how to turn a page into a performance.",
-      "As Catalystory's producer, and a set photographer, she brings the same instinct for people, process and showing up to every film we make.",
+      "She brought that instinct for people and process to producing and set photography, and was mentored by the late Stephen Emery.",
+      "Producing a film means putting together a thousand puzzle pieces, and she loves that part of it, on films of any type.",
     ],
   },
 ];
