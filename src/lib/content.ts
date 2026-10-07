@@ -59,7 +59,7 @@ export const consultingServices = [
   },
   {
     title: "Series Bible Review",
-    body: "Notes on the world, the characters, the season arc and the pitch for television, from someone who has written series bibles that reached the desks of Netflix, Apple, Starz and HBO.",
+    body: "Notes on your world, characters, season arc and pitch.",
   },
   {
     title: "Ongoing Coaching",
@@ -130,15 +130,15 @@ export const team: TeamMember[] = [
 
 export const principles = [
   {
-    title: "Character first",
-    body: "Plot is what happens. Story is who it happens to, and what it costs them. We start with the people.",
+    title: "People first",
+    body: "Plot is what happens. Story is who it happens to, and what it costs them.",
+  },
+  {
+    title: "Imagination, with a pulse",
+    body: "Worlds far beyond our own, or long ago, where the people feel real.",
   },
   {
     title: "Built to be made",
-    body: "Fifteen years on set taught us that a great script is also one that can be shot, scheduled and financed.",
-  },
-  {
-    title: "Human connection",
-    body: "We make, and help make, stories about people finding a way to each other, and the love that makes us want to survive.",
+    body: "Fifteen years on set taught us that a great script is also one you can shoot, schedule and finance.",
   },
 ];

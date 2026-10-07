@@ -5,9 +5,9 @@ export default function Statement() {
     <section className="bg-ink px-6 py-28 md:px-10 md:py-40">
       <Reveal className="mx-auto max-w-4xl text-center">
         <p className="font-serif text-balance-pretty text-3xl leading-snug text-white md:text-5xl">
-          Every story is a catalyst, for the person who writes it and for the people who find it. We&apos;ve spent
-          fifteen years learning what a story costs once it has to stand up on a set.{" "}
-          <span className="text-ember-bright">Now we put that to work on yours, and on ours.</span>
+          Storytelling is human connection. We&apos;re drawn to characters pushed to the edge, in worlds far beyond our
+          own, who discover who they really are. Because what breaks us doesn&apos;t destroy us.{" "}
+          <span className="text-ember-bright">It remakes us into something greater than we thought we were.</span>
         </p>
       </Reveal>
     </section>

@@ -18,10 +18,24 @@ export default function About() {
     <>
       <PageHero eyebrow="About" title={<>Write truth. <span className="text-ember-bright">Inspire love.</span></>}>
         <p>
-          Catalystory exists because a good story changes the person who tells it and the person who finds it. We
-          produce films and help writers finish them.
+          A story can change the person who tells it and the person who finds it. Catalystory exists to make films
+          that do that, and to help writers tell theirs.
         </p>
       </PageHero>
+      <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
+        <Reveal className="mx-auto max-w-3xl space-y-6 font-serif text-xl leading-relaxed text-white-dim md:text-2xl">
+          <p>
+            <span className="text-white">Storytelling is human connection.</span> Letting my imagination run wild has
+            become one of the most fulfilling parts of my life. I&apos;m drawn to the human experience, in worlds far beyond
+            our own, where characters are pushed into situations that make them discover their own strength.
+          </p>
+          <p>
+            And I&apos;m drawn to the truth that we&apos;re all broken, and that being broken is what makes us{" "}
+            <span className="text-ember-bright">beautiful</span>.
+          </p>
+          <p className="text-base text-steel">J. Penberth Rabold, Writer &amp; Director</p>
+        </Reveal>
+      </section>
       <ProofStrip />
       <section className="bg-ink px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">

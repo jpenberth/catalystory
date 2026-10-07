@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 export default function Productions() {
   return (
     <>
-      <PageHero eyebrow="Productions" title={<>Character-driven film, <span className="text-ember-bright">made to be made.</span></>}>
+      <PageHero eyebrow="Productions" title={<>Films about <span className="text-ember-bright">the human experience.</span></>}>
         <p>
-          Catalystory is a Pittsburgh and Los Angeles film production company. We write, direct and produce
-          shorts, features and music videos, and take on commissioned work as your director and producers.
+          Catalystory produces and directs shorts, features and music videos from Pittsburgh and Los Angeles, and takes
+          on commissioned work as your director and producers.
         </p>
       </PageHero>
 
@@ -64,7 +64,7 @@ export default function Productions() {
         </Reveal>
       </section>
 
-      <CTA heading="Have something to make?" body="Tell us about the project: the story, the format, the timeline." />
+      <CTA heading="Have something you want to make?" body="Tell us about the story, the format and the timeline." />
     </>
   );
 }

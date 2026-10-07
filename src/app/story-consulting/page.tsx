@@ -28,10 +28,9 @@ export default function StoryConsulting() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceJsonLd, faqJsonLd()]) }} />
-      <PageHero eyebrow="Story Consulting" title={<>Finish the story <span className="text-ember-bright">you started.</span></>}>
+      <PageHero eyebrow="Story Consulting" title={<>Find the story <span className="text-ember-bright">only you can tell.</span></>}>
         <p>
-          Script notes and story consulting from a writer-director who has been to the desks you&apos;re aiming for,
-          and who knows exactly what &ldquo;almost&rdquo; feels like.
+          Honest script notes and story coaching from a working writer who knows what &ldquo;almost&rdquo; feels like.
         </p>
       </PageHero>
 
@@ -39,9 +38,9 @@ export default function StoryConsulting() {
         <div className="mx-auto max-w-4xl">
           <Reveal>
             <p className="font-serif text-balance-pretty text-3xl leading-snug text-white md:text-4xl">
-              Since 2015, J. Penberth Rabold&apos;s series bibles, pilots and features have landed on desks at Netflix, Apple,
-              Starz and HBO. He&apos;s come close, a lot, and learned what separates a script that almost works from one that
-              does. <span className="text-ember-bright">That&apos;s what he brings to your pages.</span>
+              Since 2015, J. Penberth Rabold&apos;s series bibles, pilots and features have reached desks at Netflix, Apple,
+              Starz and HBO. Some came close.{" "}
+              <span className="text-ember-bright">That&apos;s where the lessons are: what separates a script that almost works from one that does.</span>
             </p>
           </Reveal>
         </div>
