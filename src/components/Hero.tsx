@@ -35,11 +35,11 @@ export default function Hero() {
         />
 
         <h1 className="font-display animate-fade-up mt-4 text-4xl leading-[0.95] tracking-wide text-white [animation-delay:120ms] sm:text-5xl md:text-7xl">
-          Stories worth the cost of making them.
+          Every great story needs a spark.
         </h1>
         <p className="font-serif animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-white-dim [animation-delay:200ms] md:text-xl">
           A Pittsburgh and Los Angeles production company and story consultancy. We make films about people finding
-          their way to each other, and we help writers finish the ones they&apos;ve started.
+          their way to each other, and help writers finish the ones they&apos;ve started.
         </p>
         <div className="animate-fade-up mt-10 flex flex-wrap justify-center gap-4 [animation-delay:280ms]">
           <Link
